@@ -21,9 +21,9 @@ Route::get('/api/v1/transaction', function (Request $request) {
     for ($i = 0; $i < $request->limit; $i++) {
         $transactions[] = [
             "date" => $faker->date,
-            "amount" => $faker->numberBetween(100000, 10000000000),
-            "currency" => $faker->currencyCode(),
-            "recipient_iban" => $faker->iban(),
+            "amount" => $faker->numberBetween(1000, 20000),
+            "currency" => 'USD',
+            "recipient_iban" => 'CZ8522591564876203269102',
             "sender_iban" => $faker->iban(),
             "sender_country" => $faker->countryCode(),
             "sender_ip" => $faker->ipv4(),
